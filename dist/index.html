@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1, user-scalable=no,maximum-scale=1,width=device-width" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="description" content="科学研究費助成事業による研究概要を可視化した概念マップです。KAKENデータベースにて2022年9月時点で取得した2021年度以降に開始された（または開始予定の）研究、約5万7千件をマッピングしています。">
+        <title>科研費の知恵の木（2021年度版）</title>
+    </head>
+    <body>
+        <div id="map"></div>
+        <div class="map-overlay">
+                <select id="category-id" name="category-id" class="category-select"></select>
+        </div>
+        <script src="app/flatgeobuf-geojson.min.js"></script>
+        <script src="app/main.js"></script>
+    </body>
+</html>
