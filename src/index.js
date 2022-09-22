@@ -18,14 +18,16 @@ const map = new maplibregl.Map({
     maxBounds: [[-50.0000, -10.0000],[50.0000, 25.0000]],
     bearing: init_bearing,
     pitch: init_pitch,
+    interactive: true,
     dragRotate: false,
     touchPitch: false,
-    interactive: true,
+    pitchWithRotate: false,
     doubleClickZoom: false,
     maplibreLogo: false,
     attributionControl:false
 });
 
+map.touchZoomRotate.disableRotation();
 map.zoomIn({duration: 1000});
 
 const attCntl = new maplibregl.AttributionControl({
