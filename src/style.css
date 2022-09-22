@@ -22,6 +22,8 @@ html, body {
 }
 
 .map-overlay select {
+    color:#111;
+    font-weight: normal;
     font-size: 12px;
     font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
     width: 100%;

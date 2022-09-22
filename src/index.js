@@ -29,7 +29,7 @@ const map = new maplibregl.Map({
 map.zoomIn({duration: 1000});
 
 const attCntl = new maplibregl.AttributionControl({
-    customAttribution: '<p class="remark"><a href="https://kaken.nii.ac.jp/ja/" target="_blank">科学研究費助成事業データベース：KAKEN</a>から取得した2021年度以降に開始または開始予定の研究情報を独自に加工（2022年9月10日時点で取得した約5万7千件が対象）。<br>研究の数が集中しているトピックほど 緑 < 黄 < 赤 の順で色づきます。個々の研究概要は１件＝１点で内容に沿って配置（拡大時のみピンク色の点とキーワードで図示）、クリックで確認可能です。<br>ご意見は作成者（<a href="https://twitter.com/Smille_feuille" target="_blank">Twitter</a> | <a href="https://github.com/sanskruthiya/traffic_accident_JP" target="_blank">Github</a>）まで。</p>',
+    customAttribution: '<p class="remark"><a href="https://kaken.nii.ac.jp/ja/" target="_blank">科学研究費助成事業データベース：KAKEN</a>から取得した2021年度以降に開始または開始予定の研究情報を独自に加工（2022年9月10日時点で取得した約5万7千件が対象）。<br>研究の数が集中しているトピックほど 緑 < 黄 < 赤 の順で色づきます。個々の研究概要は１件＝１点で内容に沿って配置（拡大時のみピンク色の点とキーワードで図示）、クリックで確認可能です。<br>ご意見は作成者（<a href="https://twitter.com/Smille_feuille" target="_blank">Twitter</a> | <a href="https://github.com/sanskruthiya/kaken-chienoki" target="_blank">Github</a>）まで。</p>',
     compact: true
 });
 
@@ -200,7 +200,7 @@ selected_category.addEventListener('change', function(){
     map.setPaintProperty('doc_grid', 'fill-color', ['let','density',['get', grid_id],['interpolate',['linear'],['var', 'density'],0,['to-color', 'transparent'],1,['to-color', '#d5eeb2'],3,['to-color', '#b4dcb4'],5,['to-color', '#ffffbf'],7,['to-color', '#ffcedb'],9,['to-color', '#ea633e']]]);
 });
 
-let popup_tmp = new maplibregl.Popup({closeButton: false, closeOnClick: false, focusAfterOpen: false, anchor:"bottom", offset:[0,-5], className:"t-popup", maxWidth:'280px'});
+let popup_tmp = new maplibregl.Popup({closeButton: false, closeOnClick: false, focusAfterOpen: false, anchor:"bottom", offset:[0,-10], className:"t-popup", maxWidth:'275px'});
 
 map.on('mouseenter', 'doc_point', function (e){
     map.getCanvas().style.cursor = 'pointer';
