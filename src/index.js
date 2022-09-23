@@ -228,7 +228,10 @@ map.on('click', 'doc_grid', function (e){
         .setLngLat(e.lngLat)
         .setHTML(popupContent)
         .addTo(map);
-    } else if (zoomSet < 9) {
-        map.flyTo({center: e.lngLat, zoom: zoomSet, speed: 0.2});
+    } else if (zoomSet < 10) {
+        //map.flyTo({center: e.lngLat, zoom: zoomSet, speed: 0.2});
+        map.flyTo({center: e.lngLat, zoom: 9.5, speed: 0.4});
+    } else {
+        map.panTo(e.lngLat,{duration: 1000});
     }
 });
