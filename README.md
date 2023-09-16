@@ -1,11 +1,13 @@
-# 知恵の木 - 科研費研究の全体概要マップ
+## 知恵の木 - 科研費研究の全体概要マップ
 
 - 科学研究費助成事業データベース（KAKEN）から取得した日本の科学研究の情報に基づく文書分散表現をインタラクティブに可視化するウェブマップです。
+
+
 - 参照元：[KAKEN](https://kaken.nii.ac.jp/)
 - デモサイト：[知恵の木](https://kashiwa.co-place.com/cmap/chienoki/)
 
 
-## 作成要領
+### 作成要領
 1. KAKENデータベースから情報取得
 - 検索結果: 84,246件 / 開始年度: 2021 TO * AND 研究課題ステータス: 採択 OR 交付 OR 完了
 
@@ -17,7 +19,7 @@
 - 文書埋め込みデータはQGISを利用してGeoJSONに変換し、TippecanoeでPMTilesに変換。
 - MapLibre GL JSによるウェブマップ化を実施。文字フォント用のglyphsデータはUNVT/NSFTを参照した。
 
-## 参照情報：
+### 参照情報
 - [mecab-ipadic-NEologd](https://github.com/neologd/mecab-ipadic-neologd/blob/master/README.ja.md)
 - [FastText](https://fasttext.cc/)
 - [UMAP](https://umap-learn.readthedocs.io/en/latest/)
