@@ -4,12 +4,12 @@
 
 
 - 参照元：[KAKEN](https://kaken.nii.ac.jp/)
-- デモサイト：[知恵の木](https://kashiwa.co-place.com/cmap/chienoki/)
+- デモサイト：[リンク](https://kashiwa.co-place.com/cmap/chienoki/)
 
 
 ### 作成要領
 1. KAKENデータベースから情報取得
-- 検索結果: 84,246件 / 開始年度: 2021 TO * AND 研究課題ステータス: 採択 OR 交付 OR 完了
+- 検索結果: 84,246件 / 開始年度: 2021 TO * AND 研究課題ステータス: 採択 OR 交付 OR 完了（2023/9/1時点）
 
 2. データ整形と言語処理
 - 取得したデータ項目を整形し、MeCAB（NEologd）の形態素解析による単語分割、FastTextの学習済みモデルによる文書のベクトル化、UMAPによる次元削減を実施して文書埋め込みデータを作成。
