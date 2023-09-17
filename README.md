@@ -15,6 +15,8 @@
 - 取得したデータ項目を整形し、MeCAB（NEologd）の形態素解析による単語分割、FastTextの学習済みモデルによる文書のベクトル化、UMAPによる次元削減を実施して文書埋め込みデータを作成。
 - 加えて、HDBSCANによるクラスタリングなどで補完データを生成。
 
+- ベクトル化した文書データはdocs内にGeoJSON形式で格納したのでGIS上で読み込み可能。
+
 3. 文書埋め込みデータの可視化
 - 文書埋め込みデータはQGISを利用してGeoJSONに変換し、TippecanoeでPMTilesに変換。
 - MapLibre GL JSによるウェブマップ化を実施。文字フォント用のglyphsデータはUNVT/NSFTを参照した。
