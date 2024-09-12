@@ -9,56 +9,42 @@ html, body {
     height: 100%
     }
 
-.map-overlay {
-    position: absolute;
-    width: 250px;
-    top: 10px;
-    left: 5px;
-    padding: 2px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    line-height: 20px;
+h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color:#111; font-size: 14px; font-weight: normal; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+    transform: scale(1.1, 1);
 }
 
-.map-overlay select {
-    color:#111;
-    font-weight: normal;
-    font-size: 12px;
-    font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    background: rgba(255,255,255);
-    border-radius: 5px;
-    border: 1px solid rgb(135, 200, 235);
+h2:before, h2:after {
+    border-top: 1px solid;
+    content: "";
+    display: inline;
+    flex-grow: 1;
 }
 
-.list-overlay {
-    position: absolute;
-    overflow-y: scroll;
-    max-height: 15%;
-    width: 80%;
-    max-width: 600px;
-    bottom: 40px;
-    left: 5px;
-    padding: 8px 20px;
-    background: rgba(250,250,250,0.9);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 3px;
-    border:1px solid #999;
-    line-height: 20px;
+h2:before {
+    margin-right: 1.0em;
 }
 
-.list-overlay p {
-    color:#e77; font-size: 14px; font-weight: bold; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+h2:after {
+    margin-left: 1.0em;
 }
 
-.list-overlay a {
-    color:#333; font-size: 13px; font-weight: normal; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+ul, li {
+    color:#111; font-size: 12px; font-weight: normal; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+    padding-bottom :2px;
+    padding-right :5px;
 }
 
-p.remark {
+hr {
+    border: none;
+    border-top: 1px dotted #555;
+    width: 98%;
+}
+
+p.remarks {
     color:#555; font-size: 10px; font-weight: normal; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif; 
 }
 
@@ -74,6 +60,131 @@ span.style01 {
     background: linear-gradient(transparent 70%, #ffd700 70%);
 }
 
+.map-overlay {
+    position: absolute;
+    width: 80%;/*width: 250px;*/
+    max-width: 360px;
+    top: 55px;
+    left: 5px;
+    padding: 8px 20px;
+    background: rgba(250,250,250,1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    line-height: 20px;
+    z-index: 2;
+}
+
+.filter-overlay {
+    color:#555; font-size: 13px; font-weight: normal; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+    line-height: 21px;
+    position: absolute;
+    width: 260px;
+    top: 50px;
+    left: 0;
+    padding: 5px;
+    z-index: 1;
+}
+     
+.filter-overlay .filter-overlay-inner {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    border:1px solid #999;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+     
+.filter-overlay-inner fieldset {
+    border: 1px solid #52c2d0;
+    padding: 0;
+    margin: 0 0 12px;
+}
+     
+.filter-overlay-inner fieldset:last-child {
+    margin: 0;
+}
+
+.filter-overlay-inner select {
+    display: block;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    background:#fff;
+    padding: 5px;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+     
+.filter-overlay-inner input {
+    display: block;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    background:#fff;
+    padding: 5px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.filter-overlay-inner .clearbutton{
+    color:#ccc; font-size: 12px; font-weight: bold; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-align: center;
+    transform: scale(1.4, 1); 
+    /*background: #fff;*/
+}
+
+.list-overlay {
+    position: absolute;
+    overflow-y: scroll;
+    max-height: 15%;
+    width: 80%;
+    max-width: 600px;
+    bottom: 40px;
+    left: 5px;
+    padding: 8px 20px;
+    background: rgba(250,250,250,0.9);
+    box-shadow: 0 0 15px rgba(210,180,140,0.2);
+    border-radius: 3px;
+    border:1px solid rgb(210,180,140);
+    line-height: 18px;
+}
+
+.list-overlay p {
+    color:#e77; font-size: 14px; font-weight: bold; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+}
+
+.list-overlay a {
+    color:#333; text-decoration-color: #52c2d0; font-size: 13px; font-weight: normal; font-family: Helvetica, "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+}
+
+.list-overlay.large-screen {
+    max-height: 70%;
+    min-height: 18%;
+    line-height: 21px;
+    z-index: 4;
+}
+
+.list-overlay.large-screen a {
+    font-size: 14px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    border:1px solid #999;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
 .t-popup .maplibregl-popup-content {
     background: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
@@ -84,6 +195,37 @@ span.style01 {
     align-self: center;
     border-right: none;
     border-left-color: #333;
+}
+
+#buttons {
+    position: absolute;
+    z-index: 1;
+}
+#buttons>button {
+    display:inline-block;
+    position: relative;
+    justify-content: center;
+    margin: 2px;
+    width: 80px;
+    height: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    font-size: 12px;
+    text-align: center;
+}
+
+fieldset:disabled {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    opacity: 0.6;
+}
+
+input:disabled {
+    background-color: #ddd;
+    color: #666;
 }
 
 .crosshair {
